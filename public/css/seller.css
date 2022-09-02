@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background: #fff;
+  font-family: "lato", sans-serif;
+}
+.seller-img {
+  width: 40%;
+  height: 100%;
+  object-fit: cover;
+}
+.form {
+  width: 60%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-title {
+  font-size: 1.8rem;
+  color: #d5be8b;
+  text-transform: capitalize;
+  margin-bottom: 40px;
+}
+input,
+textarea {
+  width: 70px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  height: 2rem;
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  padding: 10rem;
+  margin: 10rem 0;
+}
+textarea {
+  height: 10.3rem !important;
+  font-family: "lato", sans-serif;
+  resize: none !important;
+  outline: none !important;
+}
+.apply-btn {
+  width: 250px;
+  padding: 10px 0;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  background: #d5be8b;
+  border: none;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+  font-family: "cinzel";
+}
