@@ -11,18 +11,11 @@ let loader = document.querySelector(".loader");
 let applyBtn = document.querySelector(".apply-btn");
 
 applyBtn.addEventListener("click", () => {
-  const businessName = document.querySelector("#name");
-  const about = document.querySelector("#about");
-  const address = document.querySelector("#address");
-  // const number = document.querySelector("#number");
+  const businessName = document.querySelector("#name").value;
+  const about = document.querySelector("#about").value;
+  const address = document.querySelector("#address").value;
 
-  if (
-    !businessName.length ||
-    !address.length ||
-    !about.length
-    // number.length < 10 ||
-    // !Number(number)
-  ) {
+  if (!businessName.length || !address.length || !about.length) {
     showFormError("some informations is/are incorrect");
   } else {
     (loader.style.display = "block"),
@@ -30,7 +23,6 @@ applyBtn.addEventListener("click", () => {
         name: businessName,
         address: address,
         about: about,
-        // number: number,
         email: JSON.parse(sessionStorage.user).email,
       });
   }

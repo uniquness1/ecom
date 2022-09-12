@@ -112,15 +112,9 @@ app.get("/seller", (req, res) => {
   res.sendFile("seller.html", { root: "public" });
 });
 app.post("/seller", (req, res) => {
-  let { name, address, about } = req.body;
-  if (
-    !name.length ||
-    !address.length ||
-    !about.length
-    // number.length < 10 ||
-    // !Number(number)
-  ) {
-    return res.json({ alert: "some informations is/are incorrect" });
+  let { name, address, about, email } = req.body;
+  if (!name.length || !address.length || !about.length) {
+    return res.json({ alert: "some information(s) is/are incorrect" });
   } else {
     const sellers = collection(db, "sellers");
     setDoc(doc(sellers, email), req.body).then((data) => {
@@ -134,8 +128,12 @@ app.post("/seller", (req, res) => {
   }
 });
 // dashboard
-app.get("/dashboard", (res, req) => {
+app.get("/dashboard", (req, res) => {
   res.sendFile("dashboard.html", { root: "public" });
+});
+// add product
+app.get("/add-product", (req, res) => {
+  res.sendFile("add-product.html", { root: "public" });
 });
 
 // 404 route
@@ -148,3 +146,4 @@ app.use((req, res) => {
 app.listen(3000, () => {
   console.log("listening on port 3000");
 });
+ 

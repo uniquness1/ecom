@@ -29,11 +29,11 @@ body {
   padding: 20px;
   background: #fff;
   font-family: "lato", sans-serif;
-  width: 150px;
+  width: 300px;
   right: 0;
   border-radius: 5px;
   text-align: center;
-  border: 1px solid #190c05;
+  border: 1px solid #813105;
   display: none;
 }
 .user-icon-popup.active {
